@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Recommendations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>Smart Recommendations</h1>
+      <p class="subtitle">Select interests to get personalized suggestions</p>
+    </header>
+
+    <main class="container">
+      <aside class="panel">
+        <section class="controls">
+          <h2>Choose Interests</h2>
+          <div id="interests" class="checkbox-grid"></div>
+
+          <div class="control-row">
+            <label>Search:</label>
+            <input id="searchInput" placeholder="Search items or tags..." />
+          </div>
+
+          <div class="control-row">
+            <label>Category:</label>
+            <select id="categoryFilter">
+              <option value="all">All</option>
+            </select>
+          </div>
+
+          <div class="control-row">
+            <label>Sort By:</label>
+            <select id="sortBy">
+              <option value="relevance">Relevance</option>
+              <option value="rating">Rating</option>
+              <option value="name">Name</option>
+            </select>
+          </div>
+
+          <div class="buttons">
+            <button id="recommendBtn" class="primary">Recommend</button>
+            <button id="resetBtn">Reset</button>
+          </div>
+        </section>
+      </aside>
+
+      <section class="results">
+        <div class="results-header">
+          <h2>Recommendations</h2>
+          <div id="resultsMeta" class="results-meta"></div>
+        </div>
+
+        <div id="resultsList" class="cards"></div>
+        <div id="noMatches" class="no-matches hidden"></div>
+      </section>
+    </main>
+
+    <footer class="footer">Built with extensibility in mind — content-based, hybrid or collaborative models can be added later.</footer>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
